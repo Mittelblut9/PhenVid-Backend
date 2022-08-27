@@ -12,7 +12,7 @@ const app = express();
 app.set('config', config);
 
 serverconfig.argv().env().file({
-    file: './backend/_assets/json/config/config.json'
+    file: './_assets/json/config/config.json'
 });
 
 require('../apiroutes/main-route')({app});

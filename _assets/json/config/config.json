@@ -5,12 +5,18 @@
     "routes": {
         "main": {
             "name": "main",
-            "path": "/"
+            "path": "/api"
         },
         "getUser": {
             "name": "getUser",
             "path": "/user/:id",
             "method": "GET"
+        },
+        "ping": {
+            "name": "ping",
+            "path": "/ping",
+            "method": "GET",
+            "parent": "maintain"
         }
     }
 }
