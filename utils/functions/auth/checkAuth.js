@@ -5,4 +5,4 @@ module.exports.checkAuth = (req, res, next) => {
     }
     return res.json(status.STATUS_FORBIDDEN);
     return next();
-}
+};

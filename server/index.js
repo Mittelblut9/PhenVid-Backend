@@ -12,17 +12,15 @@ const app = express();
 app.set('config', config);
 
 serverconfig.argv().env().file({
-    file: './_assets/json/config/config.json'
+    file: './_assets/json/config/config.json',
 });
 
-require('../apiroutes/main-route')({app});
+require('../apiroutes/main-route')({ app });
 
 app.listen(process.env.BACKEND_PORT, process.env.BACKEND_DOMAIN, () => {
-    console.log(`${config.server} -------- http://${
-        process.env.BACKEND_DOMAIN
-    }:${process.env.BACKEND_PORT} server started on ${
-        process.env.BACKEND_PORT
-    }`);
+    console.log(
+        `${config.server} -------- http://${process.env.BACKEND_DOMAIN}:${process.env.BACKEND_PORT} server started on ${process.env.BACKEND_PORT}`
+    );
 });
 
 processHandler();
