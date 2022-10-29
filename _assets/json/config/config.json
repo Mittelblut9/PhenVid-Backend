@@ -1,22 +1,23 @@
 {
-    "mode": "development",
-    "server": "backend",
-
     "routes": {
         "main": {
             "name": "main",
             "path": "/api"
         },
-        "getUser": {
-            "name": "getUser",
-            "path": "/user/:id",
-            "method": "GET"
+        "maintain": {
+            "ping": {
+                "name": "ping",
+                "path": "/ping",
+                "method": "GET",
+                "parent": "maintain"
+            }
         },
-        "ping": {
-            "name": "ping",
-            "path": "/ping",
-            "method": "GET",
-            "parent": "maintain"
+        "user": {
+            "getUser": {
+                "name": "user",
+                "path": "/user/:id",
+                "method": "GET"
+            }
         }
     }
 }
